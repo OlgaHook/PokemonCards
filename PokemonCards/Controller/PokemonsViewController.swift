@@ -12,7 +12,7 @@ class PokemonsViewController: UIViewController {
     
     @IBOutlet weak var tableViewController: UITableView!
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //navigation title
@@ -27,7 +27,7 @@ class PokemonsViewController: UIViewController {
         
         
     }
-
+    
 }
 
 //make extension PokemonsViewController with subClass UITableViewDataSource
@@ -42,13 +42,13 @@ extension PokemonsViewController: UITableViewDataSource, UITableViewDelegate{
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "pokemonCell", for: indexPath) as? PokeTableViewCell else {
             return UITableViewCell()
         }
-    return cell
+        return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-     return 250
-    }
-       
+        return 250
     }
     
+}
+
 

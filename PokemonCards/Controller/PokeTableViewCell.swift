@@ -8,9 +8,9 @@
 import UIKit
 
 class PokeTableViewCell: UITableViewCell {
-
+    
     //connect with cell in Identity inspector (!) -> set a class
- 
+    
     @IBOutlet weak var pokeImageView: UIImageView!
     
     
