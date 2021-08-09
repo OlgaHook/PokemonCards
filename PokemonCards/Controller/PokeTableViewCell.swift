@@ -13,12 +13,26 @@ class PokeTableViewCell: UITableViewCell {
     
     @IBOutlet weak var pokeImageView: UIImageView!
     
-    
     @IBOutlet weak var nameLabel: UILabel!
-    
     @IBOutlet weak var supertypeLabel: UILabel!
-    
     @IBOutlet weak var hpLabel: UILabel!
-    
     @IBOutlet weak var subtypeLabel: UILabel!
+    
+    
+    func setupUI(with: Pokemon){
+        nameLabel.text = "Name: " + with.name
+        hpLabel.text = "Card value: " + with.number
+        
+        ImageController.getImage(for: with.imageUrl) { image in
+            self.pokeImageView.image = image
+        }
+        
+        if let subtype = with.subtype {
+            subtypeLabel.text = "Card " + subtype
+        }
+        
+    }
 }
+
+
+

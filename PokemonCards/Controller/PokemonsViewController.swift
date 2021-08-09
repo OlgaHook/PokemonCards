@@ -10,8 +10,9 @@ import UIKit
 class PokemonsViewController: UIViewController {
     
     
-    @IBOutlet weak var tableViewController: UITableView!
+    @IBOutlet weak var tableViewOutlet: UITableView!
     
+    var pokey: [Pokemon] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,8 +25,27 @@ class PokemonsViewController: UIViewController {
         //for this func we created our own network controller -> new Group in map Pokemon Cards-> named Helper
         //inside Helper wii create 2 files -new swift "Network controller"
         // and new swift file-> Image controller
-        
-        
+        let url = URL(string: "https://api.pokemontcg.io/v1/cards")!
+        NetworkController.performRequest(for: url, httpMethod: .get) { (data, err) in
+            if let error = err {
+                print("Getting error from \(url.absoluteString), err \(error.localizedDescription)")
+            }
+            
+            if let data = data {
+                do {
+                    let jsonData = try JSONDecoder().decode(Card.self, from: data)
+                    self.pokey = jsonData.cards
+                }catch{
+                    print ("Failed to decode Pokemon data\(error), data \(String(describing: err))")
+                }
+                DispatchQueue.main.async {
+                    self.tableViewOutlet.reloadData()
+                }
+            }else{
+                print("Data is nil")
+            }
+            
+        }
     }
     
 }
@@ -35,13 +55,19 @@ class PokemonsViewController: UIViewController {
 
 extension PokemonsViewController: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return pokey.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "pokemonCell", for: indexPath) as? PokeTableViewCell else {
             return UITableViewCell()
         }
+        
+        let onePoke = pokey[indexPath.row]
+        cell.setupUI(with: onePoke)
+        
+        
+        
         return cell
     }
     
