@@ -30,7 +30,15 @@ class PokeTableViewCell: UITableViewCell {
         if let subtype = with.subtype {
             subtypeLabel.text = "Card " + subtype
         }
-        
+        if let supertype = with.supertype {
+            
+            supertypeLabel.text = "Type " + supertype
+            
+            if with.supertype == "Trainer" {
+                contentView.backgroundColor = .blue
+            }else{
+                contentView.backgroundColor = .systemYellow           }
+        }
     }
 }
 
