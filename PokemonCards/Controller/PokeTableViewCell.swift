@@ -19,25 +19,27 @@ class PokeTableViewCell: UITableViewCell {
     @IBOutlet weak var subtypeLabel: UILabel!
     
     
-    func setupUI(with: Pokemon){
-        nameLabel.text = "Name: " + with.name
-        hpLabel.text = "Card value: " + with.number
+    func setupUI(withData: Pokemon){
+        nameLabel.text = "Name: " + withData.name
+        hpLabel.text = "Card value: " + withData.number
         
-        ImageController.getImage(for: with.imageUrl) { image in
+        ImageController.getImage(for: withData.imageUrl) { image in
             self.pokeImageView.image = image
         }
         
-        if let subtype = with.subtype {
+        if let subtype = withData.subtype {
             subtypeLabel.text = "Card " + subtype
         }
-        if let supertype = with.supertype {
+        if let supertype = withData.supertype {
             
             supertypeLabel.text = "Type " + supertype
             
-            if with.supertype == "Trainer" {
-                contentView.backgroundColor = .blue
+            if withData.supertype == "Trainer" {
+                contentView.backgroundColor = .lightGray
             }else{
-                contentView.backgroundColor = .systemYellow           }
+                contentView.backgroundColor = .systemTeal
+                
+            }
         }
     }
 }

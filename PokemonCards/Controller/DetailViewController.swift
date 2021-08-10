@@ -16,23 +16,48 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var detailSupertypeLabel: UILabel!
     @IBOutlet weak var detailSubtypeLabel: UILabel!
     
-    var poke : Pokemon!
+    var pokemon : Pokemon?
+    
+    //var pokemon : Pokemon!
+    
+    
+    @IBAction func closeDetailVCButtonTapped(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        if poke != nil {
+    
+        if let pokemon = pokemon{
+            ImageController.getImage(for: pokemon.imageUrl) {(image) in
+                self.detailImageView.image = image
             
-            detailImageView.image = UIImage(named: poke.imageUrl)
-            detailNameLabel.text = poke.name
-            detailNumberLabel.text = poke.number
-            detailSupertypeLabel.text = poke.supertype
-            detailSubtypeLabel.text = poke.subtype
-            
-            detailNameLabel.numberOfLines = 0
-            
+                self.detailNameLabel.text = pokemon.name
+                self.detailNumberLabel.text = pokemon.number
+                self.detailSupertypeLabel.text = pokemon.supertype
+                self.detailSubtypeLabel.text = pokemon.subtype
+            }
+        }else{
+            print("Carramba! Pokemon image is missing!")
         }
+        
+        
+        /*
+        //if poke != nil{
+            if let pokemon = pokemon{
+            detailImageView.image = UIImage(named: pokemon.imageUrl)
+            detailNameLabel.text = pokemon.name
+            detailNumberLabel.text = pokemon.number
+            detailSupertypeLabel.text = pokemon.supertype
+            detailSubtypeLabel.text = pokemon.subtype
+            
+            //detailNameLabel.numberOfLines = 0
+            
+        }else{
+         print("Carramba! Pokemon image is missing!")
+         
+         }
+ */
     }
     
     

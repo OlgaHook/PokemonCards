@@ -64,7 +64,7 @@ extension PokemonsViewController: UITableViewDataSource, UITableViewDelegate{
         }
         
         let onePoke = pokey[indexPath.row]
-        cell.setupUI(with: onePoke)
+        cell.setupUI(withData: onePoke)
         
         
         
@@ -83,7 +83,7 @@ extension PokemonsViewController: UITableViewDataSource, UITableViewDelegate{
        
         if let indexPath = tableViewOutlet.indexPathForSelectedRow {
             let pokeVC = segue.destination as! DetailViewController
-            pokeVC.poke = pokey[indexPath.row]
+            pokeVC.pokemon = pokey[indexPath.row]
             
         }
         // Pass the selected object to the new view controller.
