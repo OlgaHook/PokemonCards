@@ -8,6 +8,9 @@
 import Foundation
 
 struct Pokemon: Decodable{
+    
+   
+
     let id: String
     let name: String
     let imageUrl: String
@@ -21,4 +24,7 @@ struct Pokemon: Decodable{
 }
 struct Card: Decodable {
     let cards: [Pokemon]
+    
+    
 }
+

@@ -17,6 +17,7 @@
 		B45F4FF126C01CE600185A9F /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45F4FF026C01CE600185A9F /* NetworkController.swift */; };
 		B45F4FF326C01D4700185A9F /* ImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45F4FF226C01D4700185A9F /* ImageController.swift */; };
 		B4B8A3D126C1553500BCFADE /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B8A3D026C1553500BCFADE /* Pokemon.swift */; };
+		B4B8A3D326C222B500BCFADE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B8A3D226C222B500BCFADE /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		B45F4FF026C01CE600185A9F /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 		B45F4FF226C01D4700185A9F /* ImageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageController.swift; sourceTree = "<group>"; };
 		B4B8A3D026C1553500BCFADE /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		B4B8A3D226C222B500BCFADE /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 			children = (
 				B45F4FDA26BF9CC200185A9F /* PokemonsViewController.swift */,
 				B45F4FED26C00AD900185A9F /* PokeTableViewCell.swift */,
+				B4B8A3D226C222B500BCFADE /* DetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 				B45F4FD726BF9CC200185A9F /* AppDelegate.swift in Sources */,
 				B45F4FD926BF9CC200185A9F /* SceneDelegate.swift in Sources */,
 				B45F4FF326C01D4700185A9F /* ImageController.swift in Sources */,
+				B4B8A3D326C222B500BCFADE /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
