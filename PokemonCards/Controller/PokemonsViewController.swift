@@ -91,16 +91,4 @@ extension PokemonsViewController: UITableViewDataSource, UITableViewDelegate{
     
 }
 
-/*
- 
- override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     
-     if let indexPath = tableView.indexPathForSelectedRow {
-     // Get the new view controller using segue.destination
-         
-         let movieVC = segue.destination as! DetailMovieViewController
-     // Pass the selected object to the new view controller.
-         movieVC.movie = movies[indexPath.row]
- }
 
- */
