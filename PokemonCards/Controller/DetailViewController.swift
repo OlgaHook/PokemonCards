@@ -29,11 +29,12 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
     
         if let pokemon = pokemon{
+            
             ImageController.getImage(for: pokemon.imageUrl) {(image) in
                 self.detailImageView.image = image
             
                 self.detailNameLabel.text = pokemon.name
-                self.detailNumberLabel.text = pokemon.number
+                self.detailNumberLabel.text = "Number:" + pokemon.number
                 self.detailSupertypeLabel.text = pokemon.supertype
                 self.detailSubtypeLabel.text = pokemon.subtype
             }
