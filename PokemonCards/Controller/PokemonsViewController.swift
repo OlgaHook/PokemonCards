@@ -94,3 +94,19 @@ extension PokemonsViewController: UITableViewDataSource, UITableViewDelegate{
 }
 }
 
+/*
+ Alternative Navigation
+ override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    
+     if segue.identifier == "pokemonDetailSegue"{
+         
+     if let detailVC = segue.destination as? DetailViewController,
+ let row = tableViewOutlet.indexPathForSelectedRow?.row {
+ detalVC.pokemon = pokey[row]
+ }
+    
+ }
+ 
+}
+ 
+ */
