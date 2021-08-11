@@ -44,7 +44,7 @@ class DetailViewController: UIViewController {
         
         
         /*
-        //if poke != nil{
+        //if pokemon != nil{
             if let pokemon = pokemon{
             detailImageView.image = UIImage(named: pokemon.imageUrl)
             detailNameLabel.text = pokemon.name
