@@ -81,14 +81,16 @@ extension PokemonsViewController: UITableViewDataSource, UITableViewDelegate{
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
        
+        if segue.identifier == "pokemonDetailSegue"{
+            
         if let indexPath = tableViewOutlet.indexPathForSelectedRow {
             let pokeVC = segue.destination as! DetailViewController
             pokeVC.pokemon = pokey[indexPath.row]
             
         }
-        // Pass the selected object to the new view controller.
+       
     }
     
 }
-
+}
 

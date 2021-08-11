@@ -101,7 +101,7 @@
                                             <outlet property="pokeImageView" destination="nAZ-Yx-kM0" id="Q7c-Mq-xzF"/>
                                             <outlet property="subtypeLabel" destination="98e-ZB-eRF" id="d4U-PP-16P"/>
                                             <outlet property="supertypeLabel" destination="o0u-18-PGm" id="9hR-bm-AD9"/>
-                                            <segue destination="tgY-IN-6tr" kind="presentation" id="djc-ga-LJK"/>
+                                            <segue destination="tgY-IN-6tr" kind="presentation" identifier="pokemonDetailSegue" id="djc-ga-LJK"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
