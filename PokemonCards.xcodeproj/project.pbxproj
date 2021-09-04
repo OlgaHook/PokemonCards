@@ -138,6 +138,8 @@
 			dependencies = (
 			);
 			name = PokemonCards;
+			packageProductDependencies = (
+			);
 			productName = PokemonCards;
 			productReference = B45F4FD326BF9CC200185A9F /* PokemonCards.app */;
 			productType = "com.apple.product-type.application";
@@ -165,6 +167,8 @@
 				Base,
 			);
 			mainGroup = B45F4FCA26BF9CC200185A9F;
+			packageReferences = (
+			);
 			productRefGroup = B45F4FD426BF9CC200185A9F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
